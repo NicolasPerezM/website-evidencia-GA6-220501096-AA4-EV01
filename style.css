@@ -1,0 +1,130 @@
+:root {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    --secundary-color: #39E079;
+    --background-color: #040F13;
+    --main-text-color: white;
+    --gray-color: #242424;
+    color: var(--main-text-color);
+    font-family: 'Roboto Condensed';
+    font-size: 18px;
+}
+
+body {
+    background-color: var(--background-color);
+    margin: 0;
+}
+
+nav {
+ border-bottom: 2px dashed var(--secundary-color);
+ display: flex;
+ justify-content: space-between;
+ padding: 0px 20px;
+ color: var(--main-text-color);
+ background-color: var(--background-color);
+ position: sticky;
+ top: 0;
+}
+
+.logo {
+    max-width: 100px;
+}
+
+.nav-list {
+    flex: 0.5;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
+    letter-spacing: 5px;
+    font-family: 'Margarine';
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+}
+
+.nav-link:hover{
+    color: var(--secundary-color);
+}
+
+.nav-link::before{
+    transition: 300ms;
+    height: 2px;
+    content: "";
+    position: absolute;
+    background-color: var(--secundary-color);
+}
+
+.nav-link-ltr::before {
+    width: 0%;
+    bottom: -5px;
+}
+
+.nav-link-ltr:hover::before {
+    width: 100%;
+}
+
+.hero-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.hero {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+h1, h3 {
+    font-family: 'Margarine';
+    letter-spacing: 2px;
+}
+
+h1 {
+    font-size: 2.3rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+.cards-container {
+    display: flex;
+    gap: 16px;
+}
+
+.card {
+    min-width: 220px;
+    border: 2px dashed white;
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+    gap: 8px;
+    border-radius: 5px;
+    background-color: var(--gray-color);
+    justify-content: space-between;
+}
+
+.card:hover {
+    cursor: pointer;
+    border: 2px dashed var(--secundary-color);
+}
+
+.card:hover h3 {
+    color: var(--secundary-color);
+}
+
+.fa-magnifying-glass,
+.fa-image,
+.fa-bug,
+.fa-vial {
+    font-size: 1.5rem;
+}
