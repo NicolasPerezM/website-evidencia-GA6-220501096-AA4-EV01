@@ -14,12 +14,15 @@
 body {
     background-color: var(--background-color);
     margin: 0;
+    position: relative;
+    height: auto;
 }
 
 nav {
  border-bottom: 2px dashed var(--secundary-color);
  display: flex;
  justify-content: space-between;
+ align-items: center;
  padding: 0px 20px;
  color: var(--main-text-color);
  background-color: var(--background-color);
@@ -27,6 +30,15 @@ nav {
  top: 0;
 }
 
+.hamburger-input {
+    display: none;
+}
+
+@media screen and (min-width: 769px) {
+    .hamburger {
+        display: none;
+    }
+}
 .logo {
     max-width: 100px;
 }
@@ -41,7 +53,40 @@ nav {
     font-family: 'Margarine';
 }
 
+@media screen and (max-width: 769px) {
+
+    body {
+        text-align: center;
+    }
+    .nav-list {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        gap: 32px;
+        background-color: var(--background-color);
+        right: -190px;
+        top: 82px;
+        padding: 10px 32px;
+        height: 100vh;
+        border-left: 1px solid var(--secundary-color);
+        border-top: 2px dashed var(--secundary-color);
+        transition: 300ms;
+    }
+
+    .cards-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+
+#check:checked ~ .nav-list {
+    right: 0;
+}
+
 .nav-link {
+    min-width: 100px;
     color: white;
     text-decoration: none;
     text-align: center;
