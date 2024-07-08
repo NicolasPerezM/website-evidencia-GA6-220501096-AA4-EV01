@@ -16,6 +16,7 @@ body {
     margin: 0;
     position: relative;
     height: auto;
+    overflow-x: hidden;
 }
 
 nav {
@@ -119,6 +120,7 @@ nav {
     width: 100%;
     display: flex;
     justify-content: center;
+    margin-bottom: 80px;
 }
 
 .hero {
@@ -145,9 +147,14 @@ h3 {
     display: flex;
     gap: 16px;
 }
-
+a {
+    text-decoration: none;
+    color: var(--main-text-color);
+}
 .card {
     min-width: 220px;
+    max-height: 300px;
+    min-height: 300px;
     border: 2px dashed white;
     display: flex;
     flex-direction: column;
@@ -172,4 +179,56 @@ h3 {
 .fa-bug,
 .fa-vial {
     font-size: 1.5rem;
+}
+
+.step-1-container,
+.step-2-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 80px;
+}
+
+.step-1,
+.step-2 {
+    width: 75%;
+}
+
+.material-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px dashed white;
+}
+
+@media screen and (max-width: 769px) {
+    .material-container{
+        flex-direction: column;
+    }
+}
+
+.inside-material-content {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.fa-square,
+.fa-scissors,
+.fa-flask,
+.fa-thumbtack,
+.fa-layer-group {
+    font-size: 1.8rem;
+}
+
+.material-title{
+    color: var(--secundary-color)
+}
+
+.box-img,
+.forceps-img,
+.vial-img,
+.styrofoam-img,
+.pins-img {
+    max-width: 120px;
 }
