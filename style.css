@@ -15,6 +15,7 @@ body {
     background-color: var(--background-color);
     margin: 0;
     position: relative;
+    width: 100vw;
     height: auto;
     overflow-x: hidden;
 }
@@ -231,4 +232,45 @@ a {
 .styrofoam-img,
 .pins-img {
     max-width: 120px;
+}
+
+.acordeon-container{
+    width: 80%;
+    margin: auto;
+    padding-top: 16px;
+}
+
+.getGear-content-closed {
+    height: 90px;
+    overflow-y: hidden;
+    transition: 500ms;
+}
+
+.getGear-content-opened {
+    height: 400px;
+    transition: 500ms;
+}
+
+.getGear-header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fa-plus {
+    font-size: 1.5rem;
+}
+
+.getGear {
+    display: flex;
+    justify-content: space-between;
+}
+
+.getGear-title {
+    flex: 1;
+}
+
+.getGear-p {
+    flex: 1;
 }
