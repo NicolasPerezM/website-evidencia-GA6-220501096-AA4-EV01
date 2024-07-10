@@ -225,7 +225,7 @@ a {
 }
 
 .material-title{
-    color: var(--secundary-color)
+    color: var(--secundary-color);
 }
 
 .box-img,
@@ -279,7 +279,7 @@ a {
 
 .getGear-title {
     flex: 1;
-    color: var(--secundary-color)
+    color: var(--secundary-color);
 }
 
 .getGear-p {
