@@ -1,8 +1,14 @@
-const dropDownElement = document.querySelectorAll("#getGear-content")
+const dropDownElements = document.querySelectorAll("#getGear-content");
+const acordeonIcons = document.querySelectorAll("#acordeon-icon");
 
-for (let i = 0; i < dropDownElement.length; i++) {
-    dropDownElement[i].addEventListener('click', () => {
-        dropDownElement[i].classList.toggle('getGear-content-opened')
-        })
-}
+
+dropDownElements.forEach((element, index) => {
+  element.addEventListener('click', () => {
+    element.classList.toggle('getGear-content-opened');
+
+    const icon = acordeonIcons[index];
+    icon.classList.toggle('fa-plus');
+    icon.classList.toggle('fa-x');
+  });
+});
 
